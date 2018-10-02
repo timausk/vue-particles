@@ -1,18 +1,26 @@
 <template>
   <div id="app">
-    <h1>{{ title }}</h1>
+    <particle-canvas ref="particleCanvas"></particle-canvas>
   </div>
+
 </template>
 
 
 <script>
+import CanvasParticles from './components/CanvasParticles.vue';
 export default {
   name: 'app',
   data () {
     return {
       title: 'A Vue.js particles component'
     }
+  },
+  components: {
+    'particle-canvas': CanvasParticles
   }
 }
+</script>
 
-</script> <style scoped></style>
+<style>
+@import './assets/main.css';
+</style>
